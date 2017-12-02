@@ -26,7 +26,7 @@ addSequenceMatchingDigits(input: "4947511368953458947325823626295765395991842961
 class SequenceTests: XCTestCase {
   func testInput1() {
     let sum = addSequenceMatchingDigits(input: "1122")
-    XCTAssertEqual(sum, 3)
+    XCTAssertEqual(sum, 13)
   }
 
   func testInput2() {
