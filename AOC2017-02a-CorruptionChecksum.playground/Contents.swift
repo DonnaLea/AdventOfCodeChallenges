@@ -1,4 +1,5 @@
-//: Playground - noun: a place where people can play
+//: Advent of Code 2017: 2 - Corruption Checksum (Part 1)
+//: https://adventofcode.com/2017/day/2
 
 import UIKit
 import XCTest
