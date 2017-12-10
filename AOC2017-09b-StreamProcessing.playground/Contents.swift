@@ -4,18 +4,6 @@
 import Foundation
 import XCTest
 
-func isSelfContainedGarbage(input: String) -> Bool {
-  var isGarbage = false
-
-  return isGarbage
-}
-
-func numGroupsContained(input: String) -> Int {
-  var numGroups = 0
-
-  return numGroups
-}
-
 func groupScore(input: String) -> Int {
   var score = 0
   var isCanceled = false
@@ -54,118 +42,42 @@ func groupScore(input: String) -> Int {
 
 class Tests : XCTestCase {
 
-  /*
   func testInput1() {
-    let isGarbage = isSelfContainedGarbage(input: "<>")
-    XCTAssertEqual(isGarbage, true)
-  }
-
-  func testInput2() {
-    let isGarbage = isSelfContainedGarbage(input: "<random characters>")
-    XCTAssertEqual(isGarbage, true)
-  }
-
-  func testInput3() {
-    let isGarbage = isSelfContainedGarbage(input: "<<<<>")
-    XCTAssertEqual(isGarbage, true)
-  }
-
-  func testInput4() {
-    let isGarbage = isSelfContainedGarbage(input: "<{!>}>")
-    XCTAssertEqual(isGarbage, true)
-  }
-
-  func testInput5() {
-    let isGarbage = isSelfContainedGarbage(input: "<!!>")
-    XCTAssertEqual(isGarbage, true)
-  }
-
-  func testInput6() {
-    let isGarbage = isSelfContainedGarbage(input: "<!!!>>")
-    XCTAssertEqual(isGarbage, true)
-  }
-
-  func testInput7() {
-    let isGarbage = isSelfContainedGarbage(input: "<{o\"i!a,<{i<a>")
-    XCTAssertEqual(isGarbage, true)
-  }
-
-  func testInput8() {
-    let numGroups = numGroupsContained(input: "{}")
-    XCTAssertEqual(numGroups, 1)
-  }
-
-  func testInput9() {
-    let numGroups = numGroupsContained(input: "{{{}}}")
-    XCTAssertEqual(numGroups, 3)
-  }
-
-  func testInput10() {
-    let numGroups = numGroupsContained(input: "{{},{}}")
-    XCTAssertEqual(numGroups, 3)
-  }
-
-  func testInput11() {
-    let numGroups = numGroupsContained(input: "{{{},{},{{}}}}")
-    XCTAssertEqual(numGroups, 6)
-  }
-
-  func testInput12() {
-    let numGroups = numGroupsContained(input: "{<{},{},{{}}>}")
-    XCTAssertEqual(numGroups, 1)
-  }
-
-  func testInput13() {
-    let numGroups = numGroupsContained(input: "{<a>,<a>,<a>,<a>}")
-    XCTAssertEqual(numGroups, 1)
-  }
-
-  func testInput14() {
-    let numGroups = numGroupsContained(input: "{{<a>},{<a>},{<a>},{<a>}}")
-    XCTAssertEqual(numGroups, 5)
-  }
-
-  func testInput15() {
-    let numGroups = numGroupsContained(input: "{{<!>},{<!>},{<!>},{<a>}}")
-    XCTAssertEqual(numGroups, 2)
-  }
-*/
-  func testInput16() {
     let score = groupScore(input: "{}")
     XCTAssertEqual(score, 1)
   }
 
-  func testInput17() {
+  func testInput2() {
     let score = groupScore(input: "{{{}}}")
     XCTAssertEqual(score, 6)
   }
 
-  func testInput18() {
+  func testInput3() {
     let score = groupScore(input: "{{},{}}")
     XCTAssertEqual(score, 5)
   }
 
-  func testInput19() {
+  func testInput4() {
     let score = groupScore(input: "{{{},{},{{}}}}")
     XCTAssertEqual(score, 16)
   }
 
-  func testInput20() {
+  func testInput5() {
     let score = groupScore(input: "{<a>,<a>,<a>,<a>}")
     XCTAssertEqual(score, 1)
   }
 
-  func testInput21() {
+  func testInput6() {
     let score = groupScore(input: "{{<ab>},{<ab>},{<ab>},{<ab>}}")
     XCTAssertEqual(score, 9)
   }
 
-  func testInput22() {
+  func testInput7() {
     let score = groupScore(input: "{{<!!>},{<!!>},{<!!>},{<!!>}}")
     XCTAssertEqual(score, 9)
   }
 
-  func testInput23() {
+  func testInput8() {
     let score = groupScore(input: "{{<a!>},{<a!>},{<a!>},{<ab>}}")
     XCTAssertEqual(score, 3)
   }
