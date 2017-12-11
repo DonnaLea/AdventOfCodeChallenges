@@ -66,5 +66,4 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 icon.png
-Contents.swift
-contents.xcplayground
+AOC2017-empty.playground
