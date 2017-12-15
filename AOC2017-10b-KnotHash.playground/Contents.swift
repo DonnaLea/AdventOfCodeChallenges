@@ -67,6 +67,16 @@ func denseHash(lengths: [Int], numbers: [Int]) -> [Int] {
   return denseNumbers
 }
 
+func knotHash(input: String) -> String {
+  position = 0
+  skipSize = 0
+  let lengths = convertLengths(input: input)
+  let numbers = generateNumbers(maxNumber: 255)
+  let hash = knotHash(lengths: lengths, numbers: numbers)
+
+  return hash
+}
+
 func knotHash(lengths: [Int], numbers: [Int]) -> String {
   var hash = ""
   let hashArray = denseHash(lengths: lengths, numbers: numbers)
@@ -98,8 +108,6 @@ func convertLengths(input: String) -> [Int] {
 class Tests : XCTestCase {
 
   override func tearDown() {
-    position = 0
-    skipSize = 0
   }
 
   func testConvertLengths1() {
@@ -154,10 +162,8 @@ class Tests : XCTestCase {
 
   func test() {
     let input = "102,255,99,252,200,24,219,57,103,2,226,254,1,0,69,216"
-    let lengths = convertLengths(input: input)
-    let numbers = generateNumbers(maxNumber: 255)
-    let hash = knotHash(lengths: lengths, numbers: numbers)
-    print("hash: \(hash)")
+    let hash = knotHash(input: input)
+    XCTAssertEqual(hash, "44f4befb0f303c0bafd085f97741d51d")
   }
 }
 
