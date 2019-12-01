@@ -1,0 +1,9 @@
+# About
+This is a collection of Playgrounds used to write solutions to AdventOfCode 2019.
+
+# Running a Playground from the Command Line
+This command line works with Swift 4.2
+
+`swift -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks MyPlayground.playground/Contents.swift`
+
+The -F links in the frameworks referenced inside the swift file (e.g. XCText)
