@@ -1,5 +1,5 @@
-//: Advent of Code 2018: XX - Template (Part 1)
-// https://adventofcode.com/2018/day/XX
+//: Advent of Code 2019: XX - Template (Part 1)
+// https://adventofcode.com/2019/day/XX
 
 import XCTest
 
