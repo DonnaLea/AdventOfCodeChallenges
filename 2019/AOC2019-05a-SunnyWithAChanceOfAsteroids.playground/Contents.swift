@@ -74,7 +74,13 @@ func calculate(input: [Int], intInput: Int) -> [Int] {
       if opcode == 3 {
         values[addressPointer] = intInput
       } else if opcode == 4 {
-        let output = values[addressPointer]
+        let mode = modesArray.first ?? 0
+        let output: Int
+        if mode == 0 {
+          output = values[addressPointer]
+        } else {
+          output = addressPointer
+        }
 //        print("instructionPointer: \(instructionPointer)")
 //        print("addressPointer: \(addressPointer)")
         print("output: \(output)")
