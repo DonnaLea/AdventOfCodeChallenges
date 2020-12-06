@@ -23,6 +23,7 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "2020Tests",
-            dependencies: ["2020"]),
+            dependencies: ["2020"],
+            resources: [.copy("TextFiles")]),
     ]
 )
