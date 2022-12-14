@@ -18,6 +18,20 @@ class Day05Tests: XCTestCase {
         }
     }
     
+    func testInputDay5b() {
+        let input = day5TestInput
+        let values = day5bCalculate(input: input)
+        XCTAssertEqual(values, "MCD")
+    }
+    
+    func testDonnaInputB() {
+        if let filepath = Bundle.module.path(forResource: "Resources/Day05Input", ofType: "txt") {
+            let input = try! String(contentsOfFile: filepath)
+            let values = day5bCalculate(input: input)
+            XCTAssertEqual(values, "SHQWSRBDL")
+        }
+    }
+    
     let day5TestInput = """
     [D]
 [N] [C]
