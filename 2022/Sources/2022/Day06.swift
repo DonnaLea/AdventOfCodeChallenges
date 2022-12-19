@@ -1,16 +1,14 @@
 @available(macOS 13.0, *)
-func day6Calculate(input: String) -> Int {
-    return firstFourUniqueCharactersLastIndex(input: Array(input))
+func day6Calculate(input: String, numUnique: Int) -> Int {
+    return firstUniqueCharactersLastIndex(input: Array(input), numUnique: numUnique)
 }
 
-let packetMarkerSize = 4
-
-func firstFourUniqueCharactersLastIndex(input: [Character]) -> Int {
+func firstUniqueCharactersLastIndex(input: [Character], numUnique: Int) -> Int {
     for (index, _) in input.enumerated() {
-        let lastIndex = index + packetMarkerSize
+        let lastIndex = index + numUnique
         let subarray = input[index..<lastIndex]
         let set = Set(subarray)
-        if set.count == 4 {
+        if set.count == numUnique {
             return lastIndex
         }
     }
